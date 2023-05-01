@@ -10,7 +10,7 @@
   {{- end -}}
 
   {{- with .Values.tailscaleConfig.extraArgs -}}
-    {{- $args = mustAppend $args join " " . -}}
+    {{- $args = mustAppend $args (join " " .) -}}
   {{- end -}}
 
   {{- if $args -}}
